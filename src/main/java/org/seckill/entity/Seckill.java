@@ -4,24 +4,24 @@ import java.util.Date;
 
 public class Seckill {
 
-    private long seckillid;
+    private long seckillId;
 
     private String name;
 
     private int number;
 
-    private Date stratTime;
+    private Date startTime;
 
     private Date endTime;
 
     private Date createTime;
 
-    public long getSeckillid() {
-        return seckillid;
+    public long getSeckillId() {
+        return seckillId;
     }
 
-    public void setSeckillid(long seckillid) {
-        this.seckillid = seckillid;
+    public void setSeckillId(long seckillId) {
+        this.seckillId = seckillId;
     }
 
     public String getName() {
@@ -40,12 +40,12 @@ public class Seckill {
         this.number = number;
     }
 
-    public Date getStratTime() {
-        return stratTime;
+    public Date getStartTime() {
+        return startTime;
     }
 
-    public void setStratTime(Date stratTime) {
-        this.stratTime = stratTime;
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
     }
 
     public Date getEndTime() {
@@ -67,10 +67,10 @@ public class Seckill {
     @Override
     public String toString() {
         return "Seckill{" +
-                "seckillid=" + seckillid +
+                "seckillId=" + seckillId +
                 ", name='" + name + '\'' +
                 ", number=" + number +
-                ", stratTime=" + stratTime +
+                ", startTime=" + startTime +
                 ", endTime=" + endTime +
                 ", createTime=" + createTime +
                 '}';

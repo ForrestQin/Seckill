@@ -26,14 +26,13 @@ VALUES
 
 --秒杀成功明细表
 --用户登录认证相关信息
-CREATE TABLE success killed(
-`seckill_id` bigint not null comment '',
-`user_phone`bigint not null comment '',
-`state` tinyint NOT NULL DEFAULT -1 comment '状态标示：-1：无效 0：成功 1：已付款',
-`create_time` TIMESTAMP NOT NULL comment '创建时间',
-PRIMARY KEY (seckill_id,user_phone), /*联合主键**/
-KEY idx_create_time(create_time)
-
+CREATE TABLE success_killed(
+  `seckill_id` bigint not null,
+  `user_phone` bigint not null,
+  `state` tinyint NOT NULL DEFAULT -1 comment '状态标示：-1：无效 0：成功 1：已付款',
+  `create_time` TIMESTAMP NOT NULL comment '创建时间',
+  PRIMARY KEY (seckill_id,user_phone), /*联合主键**/
+  KEY idx_create_time(create_time)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='秒杀成功明细'
 
 --连接数据控制台
