@@ -6,7 +6,7 @@ import org.seckill.enums.SeckillStateEnum;
 /**
  * 用来封装秒杀执行后的结果
  */
-public class SeckillExecution extends Throwable {
+public class SeckillExecution {
     private long seckillId;
 
     private int state;
@@ -15,6 +15,10 @@ public class SeckillExecution extends Throwable {
 
     //秒杀对象
     private SuccessKilled successKilled;
+
+    public SeckillExecution(){
+
+    }
 
     public SeckillExecution(long seckillId, SeckillStateEnum stateEnum) {
         this.seckillId = seckillId;
@@ -59,5 +63,15 @@ public class SeckillExecution extends Throwable {
 
     public void setSuccessKilled(SuccessKilled successKilled) {
         this.successKilled = successKilled;
+    }
+
+    @Override
+    public String toString() {
+        return "SeckillExecution{" +
+                "seckillId=" + seckillId +
+                ", state=" + state +
+                ", stateInfo='" + stateInfo + '\'' +
+                ", successKilled=" + successKilled +
+                '}';
     }
 }

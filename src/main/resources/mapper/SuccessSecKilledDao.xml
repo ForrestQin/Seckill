@@ -4,14 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="org.seckill.dao.SuccessKilledDao">
     <insert id="insertSuccessKilled" parameterType="long">
---         主键冲突，报错
         INSERT ignore into success_killed (seckill_id,user_phone,state)
         VALUES (#{seckillId},#{userPhone},0)
     </insert>
 
     <select id="queryByIdWithSeckill" resultType="SuccessKilled">
---       根据id查询SuccessKilled并携带Seckill实体
---     可以自由控制SQL
       select
         sk.seckill_id,
         sk.user_phone,
