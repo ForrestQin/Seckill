@@ -12,6 +12,11 @@
        （提供一系列功能：数据绑定、数字和日期的format，@NumberFormat，@DataTimeFormat,
            xml,json默认读写支持）
        -->
+ <!--简化配置
+    （1）自动注册DefaultAnnotationHandlerMapping，AnnotationMethodHandlerAdapter
+    （提供一系列功能：数据绑定、数字和日期的format，@NumberFormat，@DataTimeFormat,
+        xml,json默认读写支持）
+    -->
     <mvc:annotation-driven/>
 
     <!--servlet-mapping 映射路径："*."-->
